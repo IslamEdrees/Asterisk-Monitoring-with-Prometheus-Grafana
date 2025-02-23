@@ -93,18 +93,21 @@ scrape_configs:
   - job_name: 'asterisk-exporter'
     static_configs:
       - targets: ['192.168.xx.xx:9200']
-```
+
 Restart Prometheus:
-
+```
 sudo systemctl restart prometheus
-
+```
 
 ### Install & Start Grafana
-
+```
 sudo apt install -y grafana
 sudo systemctl enable --now grafana-server
-
+```
 Access Grafana at **http://your-server-ip:3000** (default login: `admin/admin`).
+
+
+```
 
 
 ![image](https://github.com/user-attachments/assets/41c030aa-2b55-4da9-9bf0-cabd2846e0a3)
